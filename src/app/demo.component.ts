@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Person, DataService } from './data.service';
 
@@ -7,7 +7,7 @@ import { Person, DataService } from './data.service';
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css']
 })
-export class DemoComponent implements OnInit, AfterViewInit {
+export class DemoComponent implements OnInit {
 
   people$: Observable<Person[]>;
   // selectedPersonId = '5a15b13c36e7a7f00cf0d7cb';
@@ -24,7 +24,4 @@ export class DemoComponent implements OnInit, AfterViewInit {
     }, 0);
   }
 
-  ngAfterViewInit(): void {
-
-  }
 }
