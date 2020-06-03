@@ -3,19 +3,15 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { FleetComponent } from './fleet/fleet.component';
 import { DemoComponent } from './demo.component';
+import { FleetsModule } from './fleet/fleet.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DemoComponent,
-    FleetComponent,
-  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -23,9 +19,17 @@ import { DemoComponent } from './demo.component';
     FormsModule,
     AppRoutingModule,
     NgSelectModule,
-    NgOptionHighlightModule,
 
+    CoreModule,
+    SharedModule,
+
+    //FleetsModule,
   ],
+  declarations: [
+    AppComponent,
+    DemoComponent,
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
